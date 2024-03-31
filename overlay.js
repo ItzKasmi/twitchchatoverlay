@@ -12,11 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log(`${tags['display-name']}: ${message}`);
         
         var newMessage = document.createElement('li');
-        var text = document.createElement("blockquote");
-
-        newMessage.innerText = `${tags['display-name']}:`;
-        text.innerText = `${message}`;
-        newMessage.append(text);
+        newMessage.innerText = `${tags['display-name']}: ${message}`;
         chat.append(newMessage);
 
         // TODO: Base code just playing around with CSS above
