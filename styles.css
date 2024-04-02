@@ -6,7 +6,10 @@
   }
 
 body { 
-    /* Light Purple background-color: rgba(176, 146, 247, 255);*/
+    /* 
+    Light Purple background-color: rgba(176, 146, 247, 255);
+    I can also use 0 in the final paramater of rgba to make the surronding purple transparent on screen.
+    */
     background-color: rgb(136, 89, 248); 
     margin: 0px auto; 
     overflow: hidden; 
