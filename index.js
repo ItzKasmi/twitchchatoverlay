@@ -1,3 +1,4 @@
+// https://github.com/ItzKasmi/itzkasmi.github.io/blob/4f0eee4b0b81b67a9030721923ae43a5a5fa98e6/node_modules/tmi-utils/dist/esm/emote.js
 import { getEmoteAsUrl, parseEmotesInMessage } from 'tmi-utils';
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // const may need to be changed to var
         const newMessage = document.createElement('li');
 
+        newMessage.append(`${tags['display-name']}: `);
         // Safely append each part
         parsedMessage.forEach(({ type, value, raw }) => {
             if (type === 'emote') {
@@ -39,12 +41,13 @@ document.addEventListener("DOMContentLoaded", function() {
         });
         
         console.log(newMessage)
-        chat.append(addedMessage);
+        chat.append(newMessage);
 
         // TODO: Base code just playing around with CSS above
         // var newMessage = document.createElement('li');
         // newMessage.innerText = `${tags['display-name']}: ${message}`;
         // chat.append(newMessage);
+
     });
+
 });
-		
